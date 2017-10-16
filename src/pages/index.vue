@@ -15,6 +15,7 @@
   color: #aaa;
 }
 </style>
+
 <template>
   <view class="container">
     <view class="userinfo" @tap="handleViewTap">
@@ -83,7 +84,7 @@
 import wepy from 'wepy'
 import List from '../components/list'
 import Panel from '../components/panel'
-import Counter from 'counter' // alias example
+import Counter from 'counter'
 import Group from '../components/group'
 import Toast from 'wepy-com-toast'
 import testMixin from '../mixins/test'

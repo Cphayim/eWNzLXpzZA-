@@ -14,14 +14,16 @@ module.exports = {
     'html'
   ],
   settings: {
-    'html/html-extensions': ['.html', '.wpy']
+    // 'html/html-extensions': ['.html', '.wpy']
+    // 修改后缀为 .vue 以支持 VSCode 的 JavaScript 代码提示
+    'html/html-extensions': ['.html', '.vue']
   },
   // add your custom rules here
   'rules': {
     // 禁止使用 var 声明变量，必须使用 let 声明变量 或 const 声明常量
     'no-var': 2,
     // 变量名与属性名使用驼峰写法，而不是下划线写法
-    'camelcase': [2, {"properties": "always"}],
+    'camelcase': [2, { "properties": "always" }],
     // 声明变量的同时必须初始化
     'init-declarations': 2,
     // 使用 === 与 !== 进行比较。而不是 == 与 !=
@@ -45,10 +47,11 @@ module.exports = {
     // 数组的最后一个元素或对象的最后一个属性之后不能带逗号
     'comma-dangle': [2, 'never'],
     // 控制逗号前后的空格，逗号前不能带空格，逗号后可以
-    'comma-spacing': [2, {'before': false, 'after': true}],
+    'comma-spacing': [2, { 'before': false, 'after': true }],
     // 控制逗号在行尾出现还是在行首出现
     'comma-style': [2, 'last'],
-
+    // 是否允许行尾使用空白符
+    'no-trailing-spaces': [0],
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await

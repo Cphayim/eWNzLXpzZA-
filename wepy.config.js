@@ -2,7 +2,9 @@ const path = require('path');
 var prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  wpyExt: '.wpy',
+  // wpyExt: '.wpy',
+  // 修改后缀为 .vue 以支持 VSCode 的 JavaScript 代码提示
+  wpyExt: '.vue',
   build: {
     web: {
       htmlTemplate: path.join('src', 'index.template.html'),
@@ -48,7 +50,7 @@ if (prod) {
   // module.exports.compilers['sass'] = {outputStyle: 'compressed'}
 
   // 压缩less
-  module.exports.compilers['less'] = {compress: true}
+  module.exports.compilers['less'] = { compress: true }
 
   // 压缩js
   module.exports.plugins = {
